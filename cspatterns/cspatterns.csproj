@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="NodaTime">
       <HintPath>..\packages\NodaTime.0.9.0\lib\net35-Client\NodaTime.dll</HintPath>
     </Reference>
@@ -51,11 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Diary.cs" />
-    <Compile Include="Classes\ILicense.cs" />
+    <Compile Include="Classes\Injector.cs" />
     <Compile Include="Classes\License.cs" />
     <Compile Include="Classes\Singleton4.cs" />
     <Compile Include="Classes\Singleton.cs" />
     <Compile Include="Clients\DiaryClient.cs" />
+    <Compile Include="Clients\DiaryPresenter.cs" />
     <Compile Include="Clients\LicenseClient.cs" />
     <Compile Include="Clients\SingletonClient.cs" />
     <Compile Include="Program.cs" />

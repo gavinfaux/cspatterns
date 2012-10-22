@@ -13,17 +13,11 @@
 
     #endregion
 
-    /// <summary>
-    ///   The date time interface client.
-    /// </summary>
     [TestFixture]
     public class LicenseClient
     {
         #region Public Methods and Operators
 
-        /// <summary>
-        /// The expire at exact instance.
-        /// </summary>
         [Test]
         public void ExpireAtExactInstance()
         {
@@ -34,9 +28,6 @@
             Assert.IsTrue(license.HasExpired);
         }
 
-        /// <summary>
-        /// The expired license.
-        /// </summary>
         [Test]
         public void ExpiredLicense()
         {
@@ -47,9 +38,6 @@
             Assert.IsTrue(license.HasExpired);
         }
 
-        /// <summary>
-        /// The license is valid.
-        /// </summary>
         [Test]
         public void LicenseIsValid()
         {
@@ -60,9 +48,6 @@
             Assert.IsFalse(license.HasExpired);
         }
 
-        /// <summary>
-        /// The license is valid but then expires.
-        /// </summary>
         [Test]
         public void LicenseIsValidButThenExpires()
         {

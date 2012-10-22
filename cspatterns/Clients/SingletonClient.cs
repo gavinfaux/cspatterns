@@ -10,17 +10,11 @@
 
     #endregion
 
-    /// <summary>
-    ///   The singleton client.
-    /// </summary>
     [TestFixture]
     public class SingletonClient
     {
         #region Public Methods and Operators
 
-        /// <summary>
-        ///   The use singleton.
-        /// </summary>
         [Test]
         public void UseSingleton()
         {
@@ -33,9 +27,6 @@
             Assert.AreSame(s1, s2);
         }
 
-        /// <summary>
-        ///   The use singleton4.
-        /// </summary>
         [Test]
         public void UseSingleton4()
         {

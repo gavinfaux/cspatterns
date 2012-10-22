@@ -1,25 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace cspatterns.Classes
+﻿namespace cspatterns.Classes
 {
-    using System.Diagnostics;
+    #region
 
     using NodaTime;
     using NodaTime.Text;
 
+    #endregion
+
     public class Diary
     {
-        private readonly LocalDatePattern outputPattern = LocalDatePattern.CreateWithInvariantInfo("yyyy-MM-dd");
-
-        private readonly IClock clock;
+        #region Fields
 
         private readonly CalendarSystem calendar;
 
+        private readonly IClock clock;
+
+        private readonly LocalDatePattern outputPattern = LocalDatePattern.CreateWithInvariantInfo("yyyy-MM-dd");
+
         private readonly DateTimeZone timeZone;
+
+        #endregion
+
+        #region Constructors and Destructors
 
         public Diary(IClock clock, CalendarSystem calendar, DateTimeZone timeZone)
         {
@@ -28,11 +30,16 @@ namespace cspatterns.Classes
             this.timeZone = timeZone;
         }
 
+        #endregion
+
+        #region Public Methods and Operators
+
         public string FormatToday()
         {
-            var d = clock.Now.InZone(timeZone, calendar).LocalDateTime.Date;
-            return  outputPattern.Format(d);
-
+            var d = this.clock.Now.InZone(this.timeZone, this.calendar).LocalDateTime.Date;
+            return this.outputPattern.Format(d);
         }
+
+        #endregion
     }
 }
