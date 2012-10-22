@@ -98,6 +98,7 @@
             var l = new License(Instant.UnixEpoch, c);
             var d = new Diary(c, CalendarSystem.Iso, DateTimeZone.GetSystemDefault());
             var p = new DiaryPresenter(c, d, l);
+            p.Start();
         }
 
         private static void SingletonTest()
